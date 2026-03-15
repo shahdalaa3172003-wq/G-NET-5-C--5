@@ -120,3 +120,142 @@
 //     }
 // }
  #endregion
+ #region Q3
+//  Part 3 — Functions (Calculator)
+
+// using System;
+
+// class Program
+// {
+//     static double Add(double a, double b) => a + b;
+
+//     static double Subtract(double a, double b) => a - b;
+
+//     static double Multiply(double a, double b) => a * b;
+
+//     static double Divide(double a, double b)
+//     {
+//         if (b == 0)
+//         {
+//             Console.WriteLine("Cannot divide by zero");
+//             return 0;
+//         }
+
+//         return a / b;
+//     }
+
+//     static void Main()
+//     {
+//         Console.Write("Enter first number: ");
+//         double a = double.Parse(Console.ReadLine());
+
+//         Console.Write("Enter second number: ");
+//         double b = double.Parse(Console.ReadLine());
+
+//         Console.Write("Operation (+ - * /): ");
+//         char op = char.Parse(Console.ReadLine());
+
+//         double result = 0;
+
+//         switch (op)
+//         {
+//             case '+': result = Add(a, b); break;
+//             case '-': result = Subtract(a, b); break;
+//             case '*': result = Multiply(a, b); break;
+//             case '/': result = Divide(a, b); break;
+//         }
+
+//         Console.WriteLine("Result = " + result);
+//     }
+// }
+// Part 3 — Q2 Circle
+
+// using System;
+
+// class Program
+// {
+//     static void CalculateCircle(double r, out double area, out double circumference)
+//     {
+//         area = Math.PI * r * r;
+//         circumference = 2 * Math.PI * r;
+//     }
+
+//     static void Main()
+//     {
+//         Console.Write("Enter radius: ");
+//         double r = double.Parse(Console.ReadLine());
+
+//         double area, circumference;
+
+//         CalculateCircle(r, out area, out circumference);
+
+//         Console.WriteLine("Area = " + area);
+//         Console.WriteLine("Circumference = " + circumference);
+//     }
+// }
+// (Student Grade Manager)
+
+// using System;
+
+// enum Grade { A, B, C, D, F }
+
+// class Program
+// {
+//     static Grade GetGrade(int score)
+//     {
+//         if (score >= 90) return Grade.A;
+//         else if (score >= 80) return Grade.B;
+//         else if (score >= 70) return Grade.C;
+//         else if (score >= 60) return Grade.D;
+//         else return Grade.F;
+//     }
+
+//     static double CalculateAverage(int[] scores)
+//     {
+//         int sum = 0;
+
+//         foreach (int s in scores)
+//             sum += s;
+
+//         return (double)sum / scores.Length;
+//     }
+
+//     static void GetMinMax(int[] scores, out int min, out int max)
+//     {
+//         min = scores[0];
+//         max = scores[0];
+
+//         foreach (int s in scores)
+//         {
+//             if (s < min) min = s;
+//             if (s > max) max = s;
+//         }
+//     }
+
+//     static void Main()
+//     {
+//         int[] scores = new int[5];
+
+//         for (int i = 0; i < 5; i++)
+//         {
+//             Console.Write($"Enter score for Student {i + 1}: ");
+//             scores[i] = int.Parse(Console.ReadLine());
+//         }
+
+//         Console.WriteLine("\n--- Report ---");
+
+//         for (int i = 0; i < 5; i++)
+//         {
+//             Grade g = GetGrade(scores[i]);
+//             Console.WriteLine($"Student {i + 1}: {scores[i]} -> Grade: {g}");
+//         }
+
+//         double avg = CalculateAverage(scores);
+
+//         GetMinMax(scores, out int min, out int max);
+
+//         Console.WriteLine("Average: " + avg);
+//         Console.WriteLine("Highest Score: " + max);
+//         Console.WriteLine("Lowest Score: " + min);
+//     }
+// }
